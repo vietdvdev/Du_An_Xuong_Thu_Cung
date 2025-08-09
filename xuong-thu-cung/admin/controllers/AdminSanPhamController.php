@@ -311,6 +311,7 @@ class AdminSanPhamController
     public function deleteSanPham()
     {
         $id = $_GET['id_san_pham'];
+        // var_dump($id);die;
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         if ($sanPham) {

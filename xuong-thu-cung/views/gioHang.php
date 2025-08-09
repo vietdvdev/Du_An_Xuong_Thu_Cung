@@ -80,7 +80,7 @@
                                             </span></td>
 
 
-                                            <td class="pro-remove"><a href="<?= BASE_URL . '?act=xoa-san-pham-gio-hang&san_pham_id='. $sanPham['id']  ?>"><i class="fa fa-trash-o"></i></a></td>
+                                            <td class="pro-remove"><a href="<?= BASE_URL . '?act=xoa-san-pham-gio-hang&san_pham_id='. $sanPham['id']  ?>" onclick="return confirm('Xác nhận xóa khỏi giỏ hàng') " ><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
 
                                     </tbody>

@@ -132,7 +132,7 @@ public function getDetailGioHang($id){
 
 
 
-             public function getChiTietById($sanPhamId) {
+             public function getSanPhamGioHangId($sanPhamId) {
                     try {
                     $sql = "SELECT * FROM chi_tiet_gio_hangs WHERE id = :id";
                     $stmt = $this->conn->prepare($sql);

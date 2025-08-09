@@ -333,6 +333,7 @@ public function thanhToan(){
                 echo "Bạn không có quyền hủy đơn hàng này";
                 exit();                
             }
+
             if($donHang['trang_thai_id'] != 1 ){
                 // chỉ đơn hàng ở trạng thái chưa xác nhận mới có thể hủy              
                 exit();                
@@ -348,41 +349,33 @@ public function thanhToan(){
 
         }
 
+        
 
+            public function DeleteSanPhamGioHang(){
+            if(isset($_SESSION['user_client'])){
+            $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']);
+            $tai_khoan_id = $user['id'];           
 
-        public function DeleteSanPhamGioHang(){
-    if(isset($_SESSION['user_client'])){
-        $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']);
-        $tai_khoan_id = $user['id'];
+            // lấy id sản phẩm hàng truyền từ URL
+            $sanPhamId = $_GET['san_pham_id'];
 
-        $sanPhamId = $_GET['id'];
-        // Lấy ID chi tiết sản phẩm từ URL
-        if(!isset($_GET['san_pham_id'])){
-            echo "Thiếu ID sản phẩm cần xóa";
-            exit();
+            $sanPham = $this->modelGioHang->getSanPhamGioHangId($sanPhamId);
+            
+            // kiểm tra Sản phẩm có thuộc giỏ hàng hay không
+            if($sanPham['gio_hang_id'] != $tai_khoan_id ){
+                echo "Bạn không có quyền xóa sản phẩm này khỏi giỏ hàng";
+                exit();                
+            }
+            // thực hiện xóa sp 
+             $this->modelGioHang->deleteChiTietSanPham($sanPhamId);
+
+            header('Location: ' . BASE_URL . '?act=gio-hang');
+
+            }else{
+                var_dump('bạn chưa đăng nhập');die;
+            }
+
         }
-
-
-        // Kiểm tra xem sản phẩm này có thuộc giỏ hàng của user không
-        $item = $this->modelGioHang->getChiTietById($sanPhamId);
-
-        if(!$item || $item['tai_khoan_id'] != $tai_khoan_id){
-            echo "Bạn không có quyền xóa sản phẩm này";
-            exit();
-        }
-
-        // Xóa dòng chi tiết sản phẩm khỏi bảng
-        $this->modelGioHang->deleteChiTietSanPham($sanPhamId);
-
-        // Quay lại trang giỏ hàng
-        header('Location: ' . BASE_URL . '?act=gio-hang');
-        exit();
-
-    } else {
-        echo "Bạn chưa đăng nhập";
-        exit();
-    }
-}
 
 
 
