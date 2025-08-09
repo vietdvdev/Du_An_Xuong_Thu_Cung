@@ -1,11 +1,5 @@
- <!-- header  -->
- <?php include './views/layout/header.php'; ?>
- <!-- Navbar -->
- <?php include './views/layout/navbar.php'; ?>
- <!-- /.navbar -->
-
- <!-- Main Sidebar Container -->
- <?php include './views/layout/sidebar.php'; ?>
+<?php require_once 'views/layout/header.php'; ?>
+<?php require_once 'views/layout/menu.php'; ?>
 
 
  <!-- Content Wrapper. Contains page content -->
@@ -14,8 +8,8 @@
      <section class="content-header">
          <div class="container-fluid">
              <div class="row mb-2">
-                 <div class="col-sm-6">
-                     <h1>Thông tin cá nhân quản trị</h1>
+                 <div class="col-sm-6 ">
+                     <h1>Thông tin cá nhân khách hàng</h1>
                  </div>
              </div>
          </div><!-- /.container-fluid -->
@@ -32,8 +26,6 @@
                      <div class="text-center">
                          <img src="<?= BASE_URL. $thongTin['anh_dai_dien'] ?> " style="width: 150px">
                          <h6 class="mt-2">Họ tên: <?= $thongTin['ho_ten'] ?></h6>
-                         <h6 class="mt-2">Chức vụ: <?= $thongTin['chuc_vu_id'] == 1 ? 'User' : 'MN' ?></h6>
- 
                      </div>
                  </div>
 
@@ -41,20 +33,20 @@
                     <div class="col-md-9">
 
 
-                     <form action="<?= BASE_URL_ADMIN . '?act=sua-thong-tin-ca-nhan-quan-tri' ?>" method="post" enctype="multipart/form-data">  
+                     <form action="<?= BASE_URL . '?act=sua-thong-tin-ca-nhan-khach-hang' ?>" method="post" enctype="multipart/form-data">  
                     <hr>
                      <h3>Sửa thông tin cá nhân</h3>
-                         <input type="hidden" name="quan_tri_id" value="<?= $thongTin['id'] ?>">
+                         <input type="hidden" name="khach_hang_id" value="<?= $thongTin['id'] ?>">
                          <div class="form-group">
                              <label class="col-lg-3 control-label">Họ và Tên:</label>
                              <div class="col-lg-12">
-                                 <input class="form-control" type="text" value="<?= $thongTin['ho_ten'] ?> " name="ho_ten">
+                                 <input class="form-control" type="text" value="<?= $thongTin['ho_ten']?> "name="ho_ten">
                              </div>
                          </div>
                          <div class="form-group">
-                             <label class="col-lg-3 control-label">Email</label>
+                             <label class="col-lg-3 control-label">Ngày sinh</label>
                              <div class="col-lg-12">
-                                 <input class="form-control" type="email" value="<?= $thongTin['email'] ?>" name="email">
+                                 <input class="form-control" type="date" value="<?= $thongTin['ngay_sinh'] ?>" name="ngay_sinh">
                              </div>
                          </div>
                          <div class="form-group">
@@ -62,15 +54,17 @@
                              <div class="col-lg-12">
                                  <input class="form-control" type="text" value="<?= $thongTin['so_dien_thoai'] ?>" name="so_dien_thoai">
                              </div>
-                         </div>
+                            </div>
                             <div class="form-group ">
-                                <label >Giới tính </label> 
-                            <select name="gioi_tinh" class="form-control ">
+                                <p><b>Giới tính</b></p>
+                                <!-- <label >Giới tính </label> -->
+                            <select name="gioi_tinh" class="form-control custom-select">
                                     <option <?= $thongTin['gioi_tinh'] == 1 ? 'selected' : '' ?> value="1">Nam</option>
                                     <option <?= $thongTin['gioi_tinh'] !== 1 ? 'selected' : '' ?> value="2">Nữ</option>
 
                             </select>
                             </div> 
+                             <br><br>
                          <div class="form-group">
                              <label class="col-lg-3 control-label">Địa chỉ</label>
                              <div class="col-lg-12">
@@ -87,7 +81,7 @@
                             <div class="form-group">
                              <label class="col-md-3 control-label"></label>
                              <div class="col-md-12">
-                                 <input type="submit" class="btn btn-primary" value="Save Changes">                               
+                                 <input type="submit" class="btn btn-primary" value="Cập nhật thông tin">                               
                              </div>
                             </div>
                          </form>
@@ -106,7 +100,7 @@
 
 
 
-                         <form action="<?= BASE_URL_ADMIN . '?act=sua-mat-khau-ca-nhan-quan-tri' ?>" method="post">
+                         <form action="<?= BASE_URL . '?act=sua-mat-khau-ca-nhan-khach-hang' ?>" method="post">
                          <div class="form-group">
                              <label class="col-md-3 control-label">Mật khẩu cũ:</label>
                              <div class="col-md-12">
@@ -137,7 +131,7 @@
                          <div class="form-group">
                              <label class="col-md-3 control-label"></label>
                              <div class="col-md-12">
-                                 <input type="submit" class="btn btn-primary" value="Save Changes">                               
+                                 <input type="submit" class="btn btn-primary" value="Lưu mật khẩu mới">                               
                              </div>
                          </div>
                             </form>
@@ -152,7 +146,7 @@
  </div>
  <!-- /.content-wrapper -->
  <!-- <footer> -->
- <?php include './views/layout/footer.php'; ?>
+ <?php require_once 'views/layout/footer.php';  ?> ?>
  <!-- endforeach -->
  <!-- Page specific script -->
 

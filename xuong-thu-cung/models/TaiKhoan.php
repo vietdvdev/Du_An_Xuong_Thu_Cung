@@ -67,5 +67,63 @@ class TaiKhoan
         }
     }  
 
+    
+            
+    public function resetPassword($id ,$password){
+        try {
+         
+            $sql = " UPDATE tai_khoans SET 
+                   
+                    mat_khau = :mat_khau
+
+                WHERE id = :id";
+                // var_dump($sql);die;
+                $stmt = $this->conn->prepare($sql);
+                
+            //    var_dump($stmt); die;
+            $stmt->execute([
+                ':mat_khau' => $password,
+                 ':id' => $id
+            ]);
+               
+            return true;
+
+        } catch (Exception $e) {
+            echo "Lỗi" . $e->getMessage();
+        }
+    }  
+
+
+
+    public function updateTaiKhoanCaNhanKhachhang($id , $ho_ten, $ngay_sinh, $so_dien_thoai, $gioi_tinh, $dia_chi, $anh_dai_dien){
+    try {
+        $sql = "UPDATE tai_khoans SET 
+                    ho_ten = :ho_ten,
+                    ngay_sinh = :ngay_sinh,
+                    so_dien_thoai = :so_dien_thoai,
+                    gioi_tinh = :gioi_tinh,
+                    dia_chi = :dia_chi,
+                    anh_dai_dien = :anh_dai_dien
+                WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([
+            ':ho_ten' => $ho_ten,
+            ':ngay_sinh' => $ngay_sinh,
+            ':so_dien_thoai' => $so_dien_thoai,
+            ':gioi_tinh' => $gioi_tinh,
+            ':dia_chi' => $dia_chi,
+            ':anh_dai_dien' => $anh_dai_dien,
+            ':id' => $id
+        ]);
+        return true;
+    } catch (Exception $e) {
+        echo "Lỗi" . $e->getMessage();
+    }
+}
+
+
+
+
+
 
 }

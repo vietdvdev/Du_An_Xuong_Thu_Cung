@@ -20,6 +20,10 @@ class HomeController
 
     public function home(){
          $listSanPham = $this->modelSanPham->getAllSanPham();
+
+
+        $listSanPhamCungDanhMuc  = $this->modelSanPham->getListSanPhamDanhMuc(2);
+          
         require_once './views/home.php';
     }
 
@@ -33,6 +37,7 @@ class HomeController
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
         
         $listSanPhamCungDanhMuc  = $this->modelSanPham->getListSanPhamDanhMuc($sanPham['danh_muc_id']);
+        
 
         if ($sanPham) {
 
@@ -44,45 +49,6 @@ class HomeController
         }
 
     }
-
-
-
-
-        function  formLogin(){
-             require_once './views/auth/formLogin.php';
-             deleteSessionError();
-        }
-
-        public function postLogin(){
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                // lấy email và pass gửi lên từ form 
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-
-                // var_dump($email);
-                // var_dump($password);die;
-                // sử lý kiểm tra thông tin đăng nhập
-                $user  = $this->modelTaiKhoan->checkLogin($email,$password);
-                if($user == $email){  // trường hợp đăng nhập thành công
-                    // lưu thông tin vào session
-                    $_SESSION['user_client'] = $user;
-                    header('Location:' . BASE_URL );
-                    exit();
-                }else{
-                    // Lỗi thì lưu lỗi vào session
-                    $_SESSION['error'] = $user;
-                    $_SESSION['flash'] = true;
-
-                    header('Location:' . BASE_URL .'?act=login');
-                    exit();
-                }
-
-                
-
-
-            }
-        }
-
 
 
         public function addGioHang(){
@@ -376,6 +342,9 @@ public function thanhToan(){
             }
 
         }
+
+
+    
 
 
 

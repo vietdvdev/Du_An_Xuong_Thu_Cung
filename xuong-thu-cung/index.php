@@ -6,6 +6,7 @@ require_once './commons/function.php'; // Hàm hỗ trợ
 
 // Require toàn bộ file Controllers
 require_once './controllers/HomeController.php';
+require_once './controllers/ClientController.php';
 
 // Require toàn bộ file Models
 require_once './models/SanPham.php';
@@ -31,7 +32,13 @@ match ($act) {
       'chi-tiet-mua-hang'       => (new HomeController())->chiTietMuaHang(),
       'huy-don-hang'            => (new HomeController())->huyDonHang(),
 
+      // thông tin cá nhân khách hàng 
+      'form-sua-thong-tin-ca-nhan-khach-hang' => (new ClientController())->formEditCaNhanKhachHang(),
+      'sua-thong-tin-ca-nhan-khach-hang' => (new ClientController())->postEditCaNhanKhachHang(),
+      'sua-mat-khau-ca-nhan-khach-hang' => (new ClientController())->postEditMatKhauCaNhanKhachHang(),
+
+
       // rout login  auth
-      'login'                   => (new HomeController())-> formLogin(),
-      'check-login'             => (new HomeController())-> postLogin(),
+      'login'                   => (new ClientController())-> formLogin(),
+      'check-login'             => (new ClientController())-> postLogin(),
 };
