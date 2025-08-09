@@ -366,7 +366,7 @@ public function thanhToan(){
                 echo "Bạn không có quyền xóa sản phẩm này khỏi giỏ hàng";
                 exit();                
             }
-            // thực hiện xóa sp 
+            // thực hiện xóa sản phẩm khỏi giỏ hàng
              $this->modelGioHang->deleteChiTietSanPham($sanPhamId);
 
             header('Location: ' . BASE_URL . '?act=gio-hang');
