@@ -40,6 +40,7 @@ class AdminTaiKhoan
             die;
         }
     }
+    
 
 
         public function getDetailTaiKhoan($id){

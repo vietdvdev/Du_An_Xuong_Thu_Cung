@@ -79,21 +79,26 @@
 
                                             <ul class="dropdown-list">
                                             <?php if(!isset($_SESSION['user_client'])){  ?>
-                                            <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng Nhập</a></li>
-                                            <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng kí</a></li>
+                                            <li><a href="<?= BASE_URL . '?act=login' ?>"><b>Đăng Nhập</b></a></li>
+                                            <li><a href="<?= BASE_URL . '?act=form-dang-ky-khach-hang' ?>"> <b>Đăng kí</b></a></li>
                                           <?php     }else{ ?>
                                               
-                                              <li><a href="<?= BASE_URL . '?act=form-sua-thong-tin-ca-nhan-khach-hang'  ?>">Tài khoản</a></li>
-                                              <li><a href="<?= BASE_URL . '?act=lich-su-mua-hang' ?>">Đơn hàng</a></li>
+                                              <li><a href="<?= BASE_URL . '?act=form-sua-thong-tin-ca-nhan-khach-hang'  ?>"> <b>Tài khoản</b></a></li>
+                                              <li><a href="<?= BASE_URL . '?act=lich-su-mua-hang' ?>"> <b>Đơn hàng</b></a></li>
+                                              <li><a href="<?= BASE_URL . '?act=logout-khach-hang' ?>" onclick="return confirm('Xác nhận đănng xuất tài khoản')"><b>Đăng xuất</b>  </a></li>
                                         <?php   } ?>
                                                                                          
                                             </ul>
+                                            
+
                                         </li>
+                                        
                               
                                         <li>
-                                            <a href="#" class="minicart-btn">
+
+                                            <a href=" <?= BASE_URL . '?act=gio-hang'  ?>" class="minicart-btn">
                                                 <i class="pe-7s-shopbag"></i>
-                                                <div class="notification">2</div>
+                                                <div class="notification">Giỏ</div>
                                             </a>
                                         </li>
                                     </ul>

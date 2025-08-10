@@ -51,21 +51,26 @@ class SanPham {
     } 
 
 
-        public function getBinhLuanFromSanPham($id){
+        public function getBinhLuanFromSanPham($san_pham_id, $trang_thai){
             try {
                 $sql = "SELECT binh_luans.*, tai_khoans.ho_ten, tai_khoans.anh_dai_dien
                         FROM binh_luans 
                         INNER JOIN tai_khoans ON binh_luans.tai_khoan_id = tai_khoans.id
-                        WHERE binh_luans.san_pham_id = :id"; 
+                        WHERE binh_luans.san_pham_id = :san_pham_id 
+                        AND binh_luans.trang_thai = :trang_thai";
 
                 $stmt = $this->conn->prepare($sql);
-                $stmt->execute([':id' => $id]);
+                $stmt->execute([
+                    ':san_pham_id' => $san_pham_id,
+                    ':trang_thai' => $trang_thai
+                ]);
                 return $stmt->fetchAll();
             } catch (Exception $e) {
                 echo "Lỗi: " . $e->getMessage();
                 return [];
             }
         }
+
 
 
         public function getListSanPhamDanhMuc($danh_muc_id){
@@ -99,7 +104,28 @@ class SanPham {
                 echo "Lỗi " . $e->getMessage();
             }
         }
+
         
+            public function addBinhLuanSanPham($tai_khoan_id,$san_pham_id,$noi_dung,$ngay_dang,$trang_thai) {
+            try {
+                $sql = "INSERT INTO binh_luans (tai_khoan_id,san_pham_id,noi_dung, ngay_dang,trang_thai)
+                 VALUES (:tai_khoan_id,:san_pham_id,:noi_dung,:ngay_dang,:trang_thai)";
+                $stmt = $this->conn->prepare($sql);
+            
+                $stmt->execute([
+                            ':tai_khoan_id' => $tai_khoan_id,
+                            ':san_pham_id' => $san_pham_id,
+                            ':noi_dung' => $noi_dung,
+                            ':ngay_dang' => $ngay_dang,
+                            ':trang_thai' => $trang_thai
+            
+                    ]);
+                return $this->conn->lastInsertId();
+            } catch (Exception $e) {
+                echo "Lỗi: " . $e->getMessage();
+                return false;
+            }
+        }
 
 
         

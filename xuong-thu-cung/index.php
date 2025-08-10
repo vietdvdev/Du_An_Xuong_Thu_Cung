@@ -31,6 +31,7 @@ match ($act) {
       'lich-su-mua-hang'        => (new HomeController())->lichSuMuaHang(),
       'chi-tiet-mua-hang'       => (new HomeController())->chiTietMuaHang(),
       'huy-don-hang'            => (new HomeController())->huyDonHang(),
+      'binh-luan-san-pham'       => (new HomeController())->postBinhLuanSanPham(),
 
       // thông tin cá nhân khách hàng 
       'form-sua-thong-tin-ca-nhan-khach-hang' => (new ClientController())->formEditCaNhanKhachHang(),
@@ -41,4 +42,7 @@ match ($act) {
       // rout login  auth
       'login'                   => (new ClientController())-> formLogin(),
       'check-login'             => (new ClientController())-> postLogin(),
+      'logout-khach-hang'            =>  (new ClientController())->logoutKhachHang(),
+      'form-dang-ky-khach-hang' => (new ClientController())->formAddKhachHang(),
+      'them-khach-hang' => (new ClientController())->postAddKhachHang(),
 };

@@ -21,6 +21,7 @@ class AdminTaiKhoanController
         require_once './views/taikhoan/quantri/listQuantri.php';
     }
 
+
     public function formAddQuanTri(){
         require_once './views/taikhoan/quantri/addQuantri.php';
         deleteSessionError();
@@ -297,6 +298,7 @@ class AdminTaiKhoanController
                 
             }
         }
+        
 
         public function formEditCaNhanQuanTri(){
             $email = $_SESSION['user_admin'];

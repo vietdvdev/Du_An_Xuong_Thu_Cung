@@ -253,18 +253,18 @@
                                             <div class="product-label new">
                                                 <span>Mới</span>
                                             </div>
-                                        <?php } ?>                                
-                                       
-                                    <div class="cart-hover">
-                                        <button class="btn btn-cart">Thêm vào giỏ hàng </button>
-                                    </div>
+                                        <?php } ?>
+
+                                        <div class="cart-hover">
+                                            <button class="btn btn-cart">Thêm vào giỏ hàng </button>
+                                        </div>
                                 </figure>
                                 <div class="product-caption text-center">
-                                                
+
                                     <h6 class="product-name">
                                         <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">Giá sản phẩm</a>
                                     </h6>
-                                    
+
                                     <div class="price-box">
                                         <span class="price-regular"><?= $sanPham['gia_san_pham']  ?></span>
                                         <span class="price-old"><del><?= $sanPham['gia_khuyen_mai'] ?></del></span>
@@ -311,7 +311,7 @@
                             <div class="testimonial-thumb">
                                 <img src="assets/img/testimonial/testimonial-41.png" alt="testimonial-thumb">
                             </div>
-                                                        <div class="testimonial-thumb">
+                            <div class="testimonial-thumb">
                                 <img src="assets/img/testimonial/testimonial-51.png" alt="testimonial-thumb">
                             </div>
                         </div>
@@ -320,33 +320,33 @@
                         <div class="testimonial-content-carousel">
                             <div class="testimonial-content">
                                 <p>Mình rất hài lòng khi mua một chú Hổ SeRiCan tại Vietdv.
-                                     Mèo khỏe mạnh, lông đẹp với vằn sọc đặc trưng. Shop có đầy đủ giấy tờ và sổ tiêm chủng rõ ràng,
-                                      rất uy tín. Giá hợp lý, dịch vụ tận tình. Rất đáng tin cậy!</p>
+                                    Mèo khỏe mạnh, lông đẹp với vằn sọc đặc trưng. Shop có đầy đủ giấy tờ và sổ tiêm chủng rõ ràng,
+                                    rất uy tín. Giá hợp lý, dịch vụ tận tình. Rất đáng tin cậy!</p>
                                 <h5 class="testimonial-author"> Monkey D. Luffy </h5>
                             </div>
                             <div class="testimonial-content">
                                 <p>Mình rất hài lòng khi mua mèo tại shop Vietdv. Mèo khỏe mạnh,
-                                     đáng yêu, được chăm sóc tốt. Shop uy tín, tư vấn nhiệt tình,
-                                      giá cả hợp lý. Sẽ tiếp tục ủng hộ!</p>
+                                    đáng yêu, được chăm sóc tốt. Shop uy tín, tư vấn nhiệt tình,
+                                    giá cả hợp lý. Sẽ tiếp tục ủng hộ!</p>
                                 <h5 class="testimonial-author">NaMi</h5>
                             </div>
                             <div class="testimonial-content">
-                                <p>Mình đã mua thú cưng nhiều lần tại shop Vietdv và luôn rất hài lòng. 
+                                <p>Mình đã mua thú cưng nhiều lần tại shop Vietdv và luôn rất hài lòng.
                                     Các bé thú cưng đều khỏe mạnh, được chăm sóc kỹ lưỡng và có đầy đủ giấy tờ rõ ràng.
                                     Shop rất uy tín, tư vấn tận tâm và giá cả hợp lý. Mỗi lần mua hàng đều mang lại trải nghiệm tốt,
-                                     mình hoàn toàn yên tâm khi chọn Vietdv!</p>
+                                    mình hoàn toàn yên tâm khi chọn Vietdv!</p>
 
                                 <h5 class="testimonial-author">Nico Robin</h5>
                             </div>
                             <div class="testimonial-content">
                                 <p>Mình đã mua thú cưng nhiều lần tại shop Vietdv và rất hài lòng về chất lượng dịch vụ.
-                                     Shop tư vấn rất nhiệt tình, hướng dẫn chăm sóc chi tiết giúp mình dễ dàng nuôi dưỡng thú cưng. Giao hàng nhanh chóng, đóng gói cẩn thận, đảm bảo thú cưng luôn khỏe mạnh khi nhận. Đây là địa chỉ uy tín mà mình tin tưởng lựa chọn nhiều lần!</p>
+                                    Shop tư vấn rất nhiệt tình, hướng dẫn chăm sóc chi tiết giúp mình dễ dàng nuôi dưỡng thú cưng. Giao hàng nhanh chóng, đóng gói cẩn thận, đảm bảo thú cưng luôn khỏe mạnh khi nhận. Đây là địa chỉ uy tín mà mình tin tưởng lựa chọn nhiều lần!</p>
 
                                 <h5 class="testimonial-author">Roronoa Zoro</h5>
                             </div>
-                                <div class="testimonial-content">
+                            <div class="testimonial-content">
                                 <p>Mình đã mua thú cưng nhiều lần tại shop Vietdv và rất hài lòng về chất lượng dịch vụ.
-                                     Shop tư vấn rất nhiệt tình, hướng dẫn chăm sóc chi tiết giúp mình dễ dàng nuôi dưỡng thú cưng. Giao hàng nhanh chóng, đóng gói cẩn thận, đảm bảo thú cưng luôn khỏe mạnh khi nhận. Đây là địa chỉ uy tín mà mình tin tưởng lựa chọn nhiều lần!</p>
+                                    Shop tư vấn rất nhiệt tình, hướng dẫn chăm sóc chi tiết giúp mình dễ dàng nuôi dưỡng thú cưng. Giao hàng nhanh chóng, đóng gói cẩn thận, đảm bảo thú cưng luôn khỏe mạnh khi nhận. Đây là địa chỉ uy tín mà mình tin tưởng lựa chọn nhiều lần!</p>
 
                                 <h5 class="testimonial-author"> Trafalgar D. Water Law </h5>
                             </div>
@@ -356,7 +356,7 @@
             </div>
         </div>
     </section>
-        <br> <br>
+    <br> <br>
     <!-- latest blog area start -->
     <section class="latest-blog-area section-padding pt-0">
         <div class="container">
@@ -375,25 +375,25 @@
                     <div class="blog-carousel-active slick-row-10 slick-arrow-style">
                         <!-- blog post item start -->
                         <?php foreach ($listSanPhamLoaiQuy as $key => $sanPham): ?>
-                        <div class="blog-post-item">
-                            <figure class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="blog image">
-                                </a>
-                            </figure>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p><?= $sanPham['ngay_nhap']   ?>| <a href="<?= BASE_URL ?>">Shop Vietdv</a></p>
+                            <div class="blog-post-item">
+                                <figure class="blog-thumb">
+                                    <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
+                                        <img src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="blog image">
+                                    </a>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p><?= $sanPham['ngay_nhap']   ?>| <a href="<?= BASE_URL ?>">Shop Vietdv</a></p>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <p>Số lượng: . <?= $sanPham['so_luong'] ?></p>
+                                    </div>
+                                    <h5 class="blog-title">
+                                        <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?> "><?= $sanPham['mo_ta']  ?></a>
+                                    </h5>
                                 </div>
-                                <div class="blog-meta">
-                                    <p>Số lượng: . <?= $sanPham['so_luong'] ?></p>
-                                </div>
-                                <h5 class="blog-title">
-                                    <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' .$sanPham['id'] ?> "><?= $sanPham['mo_ta']  ?></a>
-                                </h5>
                             </div>
-                        </div>
-                         <?php endforeach ?>
+                        <?php endforeach ?>
                         <!-- blog post item end -->
 
                         <!-- blog post item end -->

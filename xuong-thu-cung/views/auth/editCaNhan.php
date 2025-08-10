@@ -57,7 +57,7 @@
                             </div>
                             <div class="form-group ">
                                 <p><b>Giới tính</b></p>
-                                <!-- <label >Giới tính </label> -->
+                             <!-- <label >Giới tính </label> -->
                             <select name="gioi_tinh" class="form-control custom-select">
                                     <option <?= $thongTin['gioi_tinh'] == 1 ? 'selected' : '' ?> value="1">Nam</option>
                                     <option <?= $thongTin['gioi_tinh'] !== 1 ? 'selected' : '' ?> value="2">Nữ</option>

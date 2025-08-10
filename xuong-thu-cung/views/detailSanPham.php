@@ -76,18 +76,18 @@
                                         <span><?= $sanPham['so_luong'] . ' Trong kho'  ?></span>
                                     </div>
                                     <p class="pro-desc"><?= $sanPham['mo_ta'] ?> </p>
-                                    <form action="<?= BASE_URL . '?act=them-gio-hang'  ?>" method="post"> 
-                                    <div class="quantity-cart-box d-flex align-items-center">
-                                        <h6 class="option-title">Số lượng:</h6>
-                                        <div class="quantity">
-                                            <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']  ?>">
-                                            <div class="pro-qty"><input type="text" value="1" name="so_luong"></div>
+                                    <form action="<?= BASE_URL . '?act=them-gio-hang'  ?>" method="post">
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h6 class="option-title">Số lượng:</h6>
+                                            <div class="quantity">
+                                                <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']  ?>">
+                                                <div class="pro-qty"><input type="text" value="1" name="so_luong"></div>
+                                            </div>
+                                            <div class="action_link">
+                                                <button class="btn btn-cart2" type="submit">Thêm giỏ hàng</button>
+                                            </div>
                                         </div>
-                                        <div class="action_link">
-                                            <button class="btn btn-cart2" type="submit">Thêm giỏ hàng</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -115,19 +115,20 @@
                                                     </div>
                                                     <div class="review-box">
                                                         <div class="post-author">
-                                                            <p><span><?= $binhLuan['ho_ten'] ?>  -</span> <?= $binhLuan['ngay_dang'] ?> </p>
+                                                            <p><span><?= $binhLuan['ho_ten'] ?> -</span> <?= $binhLuan['ngay_dang'] ?> </p>
                                                         </div>
                                                         <p><?= $binhLuan['noi_dung']  ?></p>
                                                     </div>
                                                 </div>
 
                                             <?php endforeach ?>
-                                            <form action="#" class="review-form" method="POST">
+                                            <form action="<?= BASE_URL . '?act=binh-luan-san-pham'  ?>" class="review-form" method="POST">
                                                 <div class="form-group row">
                                                     <div class="col">
+                                                        <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']  ?>">
                                                         <label class="col-form-label"><span class="text-danger">*</span>
                                                             Nội dung bình luận </label>
-                                                        <textarea class="form-control" required></textarea>
+                                                        <textarea class="form-control" name="noi_dung" required></textarea>
 
                                                     </div>
                                                 </div>
