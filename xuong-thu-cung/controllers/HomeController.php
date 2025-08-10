@@ -20,18 +20,27 @@ class HomeController
 
     public function home(){
          $listSanPham = $this->modelSanPham->getAllSanPham();
+         // loại o là động vật thường 
+         // loại 1 là động vật quý hiếm         
+         $LoaiPhoBien= 0;
+         $LoaiQuy = 1;
+         $listSanPhamLoaiPhoBien = $this->modelSanPham->getListSanPhamCungLoai($LoaiPhoBien);
+         $listSanPhamLoaiQuy = $this->modelSanPham->getListSanPhamCungLoai($LoaiQuy);
 
+       
+        // var_dump($listSanPhamCungLoai);die;
 
-        $listSanPhamCungDanhMuc  = $this->modelSanPham->getListSanPhamDanhMuc(2);
-          
         require_once './views/home.php';
+
     }
+    
+    
 
     public function chiTietSanPham(){
 
         $id = $_GET['id_san_pham'];
-        $sanPham = $this->modelSanPham->getDetailSanPham($id);
 
+        $sanPham = $this->modelSanPham->getDetailSanPham($id);
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
 
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);

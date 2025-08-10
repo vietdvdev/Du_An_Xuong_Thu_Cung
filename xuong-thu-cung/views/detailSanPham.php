@@ -36,7 +36,7 @@
                                 <div class="product-large-slider">
 
                                     <?php foreach ($listAnhSanPham as $key => $anhSanPham):  ?>
-                                        <div class="pro-large-img img-zoom">
+                                        <div class="pro-large-img ">
                                             <img src="<?= BASE_URL . $anhSanPham['link_hinh_anh']  ?>" alt="product-details" />
                                         </div>
                                     <?php endforeach ?>
@@ -122,7 +122,7 @@
                                                 </div>
 
                                             <?php endforeach ?>
-                                            <form action="#" class="review-form">
+                                            <form action="#" class="review-form" method="POST">
                                                 <div class="form-group row">
                                                     <div class="col">
                                                         <label class="col-form-label"><span class="text-danger">*</span>

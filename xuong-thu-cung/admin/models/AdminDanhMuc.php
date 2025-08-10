@@ -18,13 +18,15 @@ class AdminDanhMuc  {
         }
     }
  
-    public function insertDanhMuc($ten_danh_muc,$mo_ta){
+    public function insertDanhMuc($ten_danh_muc,$mo_ta,$loai_dong_vat){
         try {
-            $sql = "INSERT INTO danh_mucs (ten_danh_muc,mo_ta) values (:ten_danh_muc,:mo_ta)";
+            $sql = "INSERT INTO danh_mucs (ten_danh_muc,mo_ta,loai_dong_vat) values (:ten_danh_muc,:mo_ta,:loai_dong_vat)";
             $stmt = $this->conn->prepare($sql);
+            // var_dump($stmt);die;
             $stmt->execute([
                 ':ten_danh_muc' => $ten_danh_muc,
-                ':mo_ta' => $mo_ta
+                ':mo_ta' => $mo_ta,
+                ':loai_dong_vat' => $loai_dong_vat
             ]);
 
         } catch (Exception $e) {
@@ -48,13 +50,14 @@ class AdminDanhMuc  {
         }
     }  
     
- public function updateDanhMuc($id,$ten_danh_muc,$mo_ta){
+ public function updateDanhMuc($id,$ten_danh_muc,$mo_ta,$loai_dong_vat){
         try {
-            $sql = "UPDATE danh_mucs SET ten_danh_muc =:ten_danh_muc,mo_ta=:mo_ta where id=:id ";
+            $sql = "UPDATE danh_mucs SET ten_danh_muc =:ten_danh_muc,mo_ta=:mo_ta , loai_dong_vat = :loai_dong_vat where id=:id ";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([
                 ':ten_danh_muc' => $ten_danh_muc,
                 ':mo_ta' => $mo_ta,
+                ':loai_dong_vat' => $loai_dong_vat,
                 ':id' => $id
             ]);
 

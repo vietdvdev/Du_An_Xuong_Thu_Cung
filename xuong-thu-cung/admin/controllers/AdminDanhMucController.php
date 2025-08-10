@@ -27,8 +27,9 @@ class AdminDanhMucController {
 
        if($_SERVER['REQUEST_METHOD']== 'POST'){
             // lấy ra dữ liệu 
-            $ten_danh_muc = $_POST['ten_danh_muc'];
+            $ten_danh_muc = $_POST['ten_danh_muc'];         
             $mo_ta = $_POST['mo_ta'];
+            $loai_dong_vat = $_POST['loai_dong_vat'];
 
             // tạo mảng chống để chứa dữ liệu
             $errors = [];
@@ -39,7 +40,7 @@ class AdminDanhMucController {
 
             if(empty($errors)){
                 // không có lỗi thêm danh mục
-            $this->modelDanhMuc->insertDanhMuc($ten_danh_muc,$mo_ta);
+            $this->modelDanhMuc->insertDanhMuc($ten_danh_muc,$mo_ta,$loai_dong_vat);
             header('location: ' . BASE_URL_ADMIN . '?act=danh-muc');
             exit;
             }else{
@@ -70,6 +71,7 @@ class AdminDanhMucController {
             $id = $_POST['id'];
             $ten_danh_muc = $_POST['ten_danh_muc'];
             $mo_ta = $_POST['mo_ta'];
+            $loai_dong_vat = $_POST['loai_dong_vat'];
 
             // tạo mảng chống để chứa dữ liệu
             $errors = [];
@@ -80,7 +82,7 @@ class AdminDanhMucController {
 
             if(empty($errors)){
                 // không có lỗi Sửa danh mục
-            $this->modelDanhMuc->updateDanhMuc($id,$ten_danh_muc,$mo_ta);
+            $this->modelDanhMuc->updateDanhMuc($id,$ten_danh_muc,$mo_ta,$loai_dong_vat);
             header('location: ' . BASE_URL_ADMIN . '?act=danh-muc');
             exit;
             }else{

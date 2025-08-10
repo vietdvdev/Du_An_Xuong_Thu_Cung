@@ -36,7 +36,7 @@
              </div>
              <div class="col-12 product-image-thumbs">
                <?php foreach ($listAnhSanPham as $key => $anhSP) { ?>
-                 <div class="product-image-thumb <?= $anhSP[$key] == 0 ? 'active' : ''  ?> "><img src="<?= BASE_URL . $anhSP['link_hinh_anh'];  ?>" alt="Product Image"></div>
+                 <div class="product-image-thumb <?= $anhSP[$key] == 0 ? 'active' : ''  ?> "><img src="<?= BASE_URL . $anhSP['link_hinh_anh'];  ?>"  alt="Product Image"></div>
 
                <?php } ?>
 

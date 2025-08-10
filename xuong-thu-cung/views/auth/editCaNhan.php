@@ -152,5 +152,117 @@
 
  <!-- Code injected by live-server -->
  </body>
+ 
+ <style>
+    /* Tổng thể layout */
+.content-wrapper {
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề */
+.content-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Ảnh đại diện và thông tin ngắn */
+.text-center img {
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-bottom: 15px;
+}
+
+.text-center h6 {
+    font-size: 16px;
+    color: #495057;
+}
+
+/* Form chỉnh sửa */
+form {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Alert thông báo */
+.alert {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.alert-info {
+    background-color: #e2f0fb;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.alert .close {
+    color: #000;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+/* Error text */
+.text-danger {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+    .col-md-3, .col-md-9, .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .text-center {
+        margin-bottom: 30px;
+    }
+}
+
+</style>
+
 
  </html>

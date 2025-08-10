@@ -71,7 +71,9 @@ class SanPham {
         public function getListSanPhamDanhMuc($danh_muc_id){
             try {
                 $sql = "SELECT san_phams.*,danh_mucs.ten_danh_muc
-                FROM san_phams INnER JOIN danh_mucs ON san_phams.danh_muc_id = danh_mucs.id WHERE san_phams.danh_muc_id =" . $danh_muc_id;
+                FROM san_phams 
+                INnER JOIN danh_mucs ON san_phams.danh_muc_id = danh_mucs.id 
+                WHERE san_phams.danh_muc_id =" . $danh_muc_id;
                 $stmt = $this->conn->prepare($sql);
                 $stmt->execute();
                 return $stmt->fetchAll();
@@ -80,10 +82,26 @@ class SanPham {
             }
         }
 
-            
+
+        
+        public function getListSanPhamCungLoai($loai){
+            try {
+                $sql = "SELECT san_phams.*,
+                        danh_mucs.ten_danh_muc,
+                        danh_mucs.loai_dong_vat
+                FROM san_phams 
+                JOIN danh_mucs ON san_phams.danh_muc_id = danh_mucs.id 
+                WHERE danh_mucs.loai_dong_vat =" . $loai;
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute();
+                return $stmt->fetchAll();
+            } catch (Exception $e) {
+                echo "Lỗi " . $e->getMessage();
+            }
+        }
+        
 
 
-
-
+        
 
 }

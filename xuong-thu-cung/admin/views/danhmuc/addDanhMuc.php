@@ -42,6 +42,13 @@
                         <p class="text-danger"><?= $errors['ten_danh_muc']  ?></p>
                    <?php } ?>
                   </div> 
+                  <select name="loai_dong_vat" class="form-control">
+
+                    <option value="0" >Động vật thường</option>
+                    <option value="1" >Động vật quý hiếm</option>
+                  </select>
+
+                    </div>                   
                   <div class="form-group">
                     <label >Mô tả</label>
                     <textarea  name="mo_ta" class="form-control"  placeholder="Nhập mô tả" ></textarea>
