@@ -16,24 +16,25 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo.png" alt="brand logo">
+                                        <img src="assets/img/logo/logo1.png" alt="brand logo">
                                     </a>
                                 </div>
                             </div>
                             <div class="widget-body">
-                                <p>We are a team of designers and developers that create high quality wordpress, shopify, Opencart </p>
+                                <p>Chúng tôi là nhà phát triển hệ thống bán thú cưng. Vietdv uy tín, tin tưởng, trách nhiệm, hỗ trợ khách hàng tận tình. </p>
+                                <p>Uy tín tạo nên thương hiệu, Trao giá trị tạo niềm tin</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Contact Us</h6>
+                            <h6 class="widget-title">Liên hệ với chúng tôi</h6>
                             <div class="widget-body">
                                 <address class="contact-block">
                                     <ul>
                                         <li><i class="pe-7s-home"></i> 4710-4890 Breckinridge USA</li>
-                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">demo@yourdomain.com </a></li>
-                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">(012) 800 456 789-987</a></li>
+                                        <li><i class="pe-7s-mail"></i> <a href="#">demo@yourdomain.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="#">(012) 800 456 789-987</a></li>
                                     </ul>
                                 </address>
                             </div>
@@ -41,11 +42,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Information</h6>
+                            <h6 class="widget-title">Thông tin</h6>
                             <div class="widget-body">
                                 <ul class="info-list">
-                                    <li><a href="#">about us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
+                                    <li><a href="#">Về chúng tôi</a></li>
+                                    <li><a href="#">Chính sách và điều khoản</a></li>
                                     <li><a href="#">privet policy</a></li>
                                     <li><a href="#">Terms & Conditions</a></li>
                                     <li><a href="#">contact us</a></li>
@@ -96,7 +97,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 <b>Corano</b> Made with <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"><b>HasThemes</b></a></p>
+                            <p>&copy; 20025 <b>Vietdv</b>Madein Viet Nam<i class="fa fa-heart text-danger"></i>Mua<a href="#"><b>HasThemes</b></a></p>
                         </div>
                     </div>
                 </div>

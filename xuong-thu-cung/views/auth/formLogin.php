@@ -33,13 +33,12 @@
                                     if (isset($_SESSION['success_message'])) {
                                         echo '<div class="alert-success">' . $_SESSION['success_message'] . '</div>';
                                         unset($_SESSION['success_message']); // Xóa sau khi hiển thị 1 lần
-                                    }
-                                ?>
+                                    } ?>
                             <div class="login-reg-form-wrap">
                                 <h5 class="text-center">Đăng nhập</h5>
                                     <?php if (isset($_SESSION['error'])) { ?>
-                                            <p class="text-danger login-box-msg text-center"><?= $_SESSION['error'] ?></p>
-                                            
+                                            <p class="text-danger login-box-msg text-center"><?= $_SESSION['error']?></p>
+                                             <?php  unset($_SESSION['error']) ?>
                                         <?php } else { ?>
                                             <p class="login-box-msg">Vui lòng đăng nhập</p>
                                     <?php } ?>

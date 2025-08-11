@@ -108,11 +108,6 @@
                         <a href="#">
                             <img src="assets/img/slider/slider2.png" alt="product banner">
                         </a>
-                        <div class="banner-content text-right">
-                            <h5 class="banner-text1">BEAUTIFUL</h5>
-                            <h2 class="banner-text2">Wedding<span>Rings</span></h2>
-                            <a href="shop.html" class="btn btn-text">Shop Now</a>
-                        </div>
                     </figure>
                 </div>
                 <div class="col-sm-6">
@@ -120,11 +115,6 @@
                         <a href="#">
                             <img src="assets/img/slider/slider3.png" alt="product banner">
                         </a>
-                        <div class="banner-content text-right">
-                            <h5 class="banner-text1">BEAUTIFUL</h5>
-                            <h2 class="banner-text2">Wedding<span>Rings</span></h2>
-                            <a href="shop.html" class="btn btn-text">Shop Now</a>
-                        </div>
                     </figure>
                 </div>
 
@@ -142,7 +132,7 @@
                     <!-- section title start -->
                     <div class="section-title text-center">
                         <h2 class="title">Sản phẩm của chúng tôi</h2>
-                        <p class="sub-title">Sản phâmm được cập nhật liên tục </p>
+                        <p class="sub-title">Sản phâm được cập nhật liên tục </p>
                     </div>
                     <!-- section title start -->
                 </div>
@@ -162,9 +152,9 @@
 
                                         <div class="product-item">
                                             <figure class="product-thumb">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
-                                                    <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product">
-                                                    <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product">
+                                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>" style="display:block;width:100%; max-width:300px;height:300px">
+                                                <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product" style="width:100%;height:100%">
+                                                <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product" style="width: 100%;height:100%">
                                                 </a>
                                                 <div class="product-badge">
                                                     <?php
@@ -239,10 +229,10 @@
                         <?php foreach ($listSanPhamLoaiPhoBien as $key => $sanPham): ?>
                             <div class="product-item">
                                 <figure class="product-thumb">
-                                    <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
-                                        <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product">
-                                        <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product">
-                                    </a>
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>" style="display: block; width: 100%; max-width: 300px; height: 300px;">
+                                <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product" style="width: 100%; height: 100%">
+                                <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="product" style="display: width: 100%; height: 100%">
+                                </a>
                                     <div class="product-badge">
                                         <?php
                                         $ngayNhap = new DateTime($sanPham['ngay_nhap']);
@@ -377,9 +367,10 @@
                         <?php foreach ($listSanPhamLoaiQuy as $key => $sanPham): ?>
                             <div class="blog-post-item">
                                 <figure class="blog-thumb">
-                                    <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
-                                        <img src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="blog image">
-                                    </a>
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
+                                <img src="<?= BASE_URL . $sanPham['hinh_anh']  ?>" alt="blog image" 
+                                    style="width: 357px; height: 225px; object-fit: cover;">
+                                </a>
                                 </figure>
                                 <div class="blog-content">
                                     <div class="blog-meta">
