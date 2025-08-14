@@ -31,7 +31,7 @@
               <div class="card-header">
                 <h3 class="card-title"> Sửa thông tin tài khoản khách hàng <?= $khachHang['ho_ten'] ?> </h3>
               </div>
-              <!-- /.card-header -->khachHang
+              <!-- /.card-header -->
               <!-- form start -->
               <form action="<?= BASE_URL_ADMIN . '?act=sua-khach-hang'?>" method="POST">
                 <input type="hidden" name="khach_hang_id" value="<?= $khachHang['id'] ?>">

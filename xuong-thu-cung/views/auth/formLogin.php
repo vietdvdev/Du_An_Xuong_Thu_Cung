@@ -11,7 +11,7 @@
                         <div class="breadcrumb-wrap">
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="<?= BASE_URL ?>"><i class="fa fa-home"></i></a></li>
                                     <li class="breadcrumb-item active" aria-current="page">login-Register</li>
                                 </ul>
                             </nav>
@@ -31,14 +31,13 @@
                         <div class="col-lg-12">
                             <?php
                                     if (isset($_SESSION['success_message'])) {
-                                        echo '<div class="alert-success">' . $_SESSION['success_message'] . '</div>';
-                                        unset($_SESSION['success_message']); // Xóa sau khi hiển thị 1 lần
+                                        echo '<div class="alert-success">' . $_SESSION['success_message'] . '</div>';                                        
                                     } ?>
                             <div class="login-reg-form-wrap">
                                 <h5 class="text-center">Đăng nhập</h5>
                                     <?php if (isset($_SESSION['error'])) { ?>
-                                            <p class="text-danger login-box-msg text-center"><?= $_SESSION['error']?></p>
-                                             <?php  unset($_SESSION['error']) ?>
+                                            <p class="text-danger login-box-msg text-center"><?= $_SESSION['error']?></p> 
+                                       <?php     unset($_SESSION['error'])    ?>                                   
                                         <?php } else { ?>
                                             <p class="login-box-msg">Vui lòng đăng nhập</p>
                                     <?php } ?>
@@ -59,7 +58,7 @@
                                         </div>
                                     </div>
                                     <div class="single-input-item text-center">
-                                        <button class="btn btn-sqr " type="submit">Đăng nhập</button>
+                                        <button class="btn btn-sqr"  type="submit">Đăng nhập</button>
                                     </div>
                                 </form>
                             </div>

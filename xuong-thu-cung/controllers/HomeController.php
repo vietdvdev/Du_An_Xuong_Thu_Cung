@@ -99,8 +99,16 @@ class HomeController
                 }
                 header('Location:' . BASE_URL . '?act=gio-hang');
             } else {
-                var_dump('Lỗi chưa đăng nhập ');
-                die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
+
             }
         }
     }
@@ -125,8 +133,16 @@ class HomeController
 
             require './views/giohang.php';
         } else {
-            echo "Bạn chưa đăng nhập.";
-            exit;
+
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -151,8 +167,15 @@ class HomeController
 
             require_once './views/thanhToan.php';
         } else {
-            echo "Bạn chưa đăng nhập.";
-            exit;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -219,8 +242,14 @@ class HomeController
                 header('Location:' . BASE_URL . '?act=lich-su-mua-hang');
                 exit();
             } else {
-                var_dump('Lỗi đặt hàng vui lòng đặt lại');
-                die;
+                echo "<script>
+                        if (confirm('Đặt hàng thất bại vui lòng đặt lại')) {
+                            window.location.href = '" . BASE_URL . "?act=thanh-toan'; // Điều hướng đến trang thanh toán
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
             }
         }
     }
@@ -247,8 +276,15 @@ class HomeController
 
             require_once './views/lichSuMuaHang.php';
         } else {
-            var_dump('bạn chưa đăng nhập');
-            die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -285,8 +321,15 @@ class HomeController
 
             require_once './views/chiTietMuaHang.php';
         } else {
-            var_dump('bạn chưa đăng nhập');
-            die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -318,8 +361,15 @@ class HomeController
 
             header('Location:' . BASE_URL . '?act=lich-su-mua-hang');
         } else {
-            var_dump('bạn chưa đăng nhập');
-            die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -346,8 +396,15 @@ class HomeController
 
             header('Location: ' . BASE_URL . '?act=gio-hang');
         } else {
-            var_dump('bạn chưa đăng nhập');
-            die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
         }
     }
 
@@ -369,8 +426,15 @@ class HomeController
 
                 header('Location:' . BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $san_pham_id);
             } else {
-                var_dump('Lỗi chưa đăng nhập ');
-                die;
+              // nếu chưa đăng nhập
+                echo "<script>
+                        if (confirm('Bạn chưa đăng nhập. Bạn cần đăng nhập để sử dụng chức năng này.')) {
+                            window.location.href = '" . BASE_URL . "?act=login'; // Điều hướng đến trang đăng nhập
+                        } else {
+                            window.location.href = '" . BASE_URL . "'; // Quay lại trang home
+                        }
+                    </script>";
+                exit; // Dừng lại để không thực hiện tiếp các hành động
             }
         }
     }
